@@ -19,5 +19,5 @@ mongoose.connect("mongodb://127.0.0.1:27017/news",
 const user_routes = require("./routers/userrouter");
 app.use('/news', user_routes)
 
-app.listen(3000, () => console.log('server listen on part 3000'));
+app.listen(process.env.PORT || '3000', () => console.log('server listen on part 3000'));
 
